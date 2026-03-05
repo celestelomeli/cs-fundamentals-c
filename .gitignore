@@ -1,0 +1,25 @@
+# Compiled binaries
+*.o
+*.out
+a.out
+
+# Executables (no extension on Unix)
+pointers
+pointers_swap
+experiment
+tictactoe
+minidb
+
+# macOS
+.DS_Store
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Build directories
+build/
+bin/
