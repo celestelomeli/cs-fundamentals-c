@@ -7,7 +7,13 @@ a.out
 pointers
 pointers_swap
 experiment
+arrays
+arrays_simple
+structs
+structs_simple
+char_demo
 tictactoe
+tictactoe_simple
 minidb
 
 # macOS
