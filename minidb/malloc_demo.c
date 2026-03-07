@@ -1,20 +1,20 @@
-// malloc_demo.c - Understanding dynamic memory allocation
-// Run this to see malloc/free in action!
+// malloc_demo.c - Dynamic memory allocation
 
 #include <stdio.h>
-#include <stdlib.h>
-
+#include <stdlib.h> // For malloc and free
+ 
 int main(void) {
     printf("=== Dynamic Memory Demo ===\n\n");
     
-    // CONCEPT 1: malloc allocates memory
+    // 1: malloc allocates memory
     printf("1. Allocating space for 3 integers...\n");
     int *numbers = malloc(3 * sizeof(int));
-    printf("   malloc gave us memory at address: %p\n", numbers);
+    printf("   malloc gives memory at address: %p\n", numbers);
+    // %zu = format for sizeof (size_t type)
     printf("   Size allocated: %zu bytes (3 × %zu)\n\n", 
            3 * sizeof(int), sizeof(int));
     
-    // CONCEPT 2: Use it like an array
+    // 2: Use it like an array
     printf("2. Storing values...\n");
     numbers[0] = 10;
     numbers[1] = 20;
@@ -23,8 +23,8 @@ int main(void) {
     printf("   numbers[1] = %d\n", numbers[1]);
     printf("   numbers[2] = %d\n\n", numbers[2]);
     
-    // CONCEPT 3: Growing - need more space!
-    printf("3. Need more space! Growing from 3 to 6...\n");
+    // 3: Growing
+    printf("3. Need more space. Growing from 3 to 6...\n");
     int *new_numbers = malloc(6 * sizeof(int));
     printf("   New memory at address: %p\n", new_numbers);
     
@@ -40,7 +40,7 @@ int main(void) {
     
     // Use new memory
     numbers = new_numbers;
-    printf("   Now using new memory!\n\n");
+    printf("   Now using new memory.\n\n");
     
     // Add more values
     printf("4. Adding more values to new space...\n");
@@ -54,16 +54,16 @@ int main(void) {
     }
     printf("\n\n");
     
-    // CONCEPT 4: Always free when done!
+    // 4: Always free when done
     printf("5. Cleaning up - freeing memory...\n");
     free(numbers);
-    printf("   Memory returned to system!\n\n");
+    printf("   Memory returned to system\n\n");
     
     printf("=== Key Takeaways ===\n");
-    printf("✓ malloc = borrow memory from computer\n");
-    printf("✓ Use it like an array\n");
-    printf("✓ To grow: malloc new, copy old, free old\n");
-    printf("✓ Always free when done!\n");
+    printf("malloc = borrow memory from computer\n");
+    printf("Use it like an array\n");
+    printf("To grow: malloc new, copy old, free old\n");
+    printf("Always free when done.\n");
     
     return 0;
 }

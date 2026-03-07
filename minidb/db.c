@@ -35,9 +35,9 @@ void db_add_student(char *name, int age, float gpa) {
     }
     
     // STEP 2: Add the new student
-    strcpy(students[count].name, name);
-    students[count].age = age;
-    students[count].gpa = gpa;
+    strcpy(students[count].name, name); // strcpy to copy string from where name points to in struct's name array
+    students[count].age = age; // copy int
+    students[count].gpa = gpa; // copy float
     count++;
     
     printf("Added: %s (age %d, GPA %.1f)\n", name, age, gpa);

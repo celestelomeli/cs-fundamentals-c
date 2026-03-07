@@ -1,1 +1,6 @@
+# Executables
+minidb
 malloc_demo
+
+# Object files
+*.o
