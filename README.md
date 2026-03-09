@@ -1,4 +1,4 @@
-# C Fundamentals Learning Journey
+# C Fundamentals 
 
 A hands-on learning repository for C programming fundamentals.
 ## About

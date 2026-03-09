@@ -1,0 +1,6 @@
+# Executables
+list_basics
+doubly_linked
+
+# Object files
+*.o
